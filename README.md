@@ -115,4 +115,3 @@ Este proyecto demuestra cómo se puede construir una aplicación web funcional u
 El blog técnico, además de cumplir un objetivo académico, puede ser utilizado como parte de un **portafolio personal**.
 
 ---
-
