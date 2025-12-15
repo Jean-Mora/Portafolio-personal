@@ -11,7 +11,7 @@ Este proyecto consiste en el desarrollo de un **Blog Técnico y Hoja de Vida dig
 La aplicación presenta dos secciones principales:
 
 * **Hoja de Vida**: muestra información personal, estudios y habilidades técnicas.
-* **Blog Técnico**: contiene artículos relacionados con desarrollo de software, explicados de forma clara y sencilla, pensados para estudiantes o personas que inician en el mundo del desarrollo web.
+* **Blog Técnico**: contiene posts relacionados con desarrollo de software, explicados de forma clara y sencilla
 
 El proyecto está enfocado en la **claridad del código**, un **diseño limpio y legible**, y buenas prácticas básicas de React.
 
@@ -37,30 +37,7 @@ El proyecto está enfocado en la **claridad del código**, un **diseño limpio y
 * **Axios** (consumo de API)
 * **React Router DOM** (navegación)
 * **JSON Server** (API falsa)
-* **Git y GitHub** (control de versiones)
-
----
-
-##  Estructura del Proyecto
-
-```
-frontend/
-├── src/
-│   ├── api/
-│   │   └── client.js
-│   ├── pages/
-│   │   ├── Home.jsx
-│   │   ├── Posts.jsx
-│   │   └── PostDetail.jsx
-│   ├── App.jsx
-│   ├── main.jsx
-│   └── index.css
-├── db.json
-├── package.json
-└── README.md
-```
-
----
+* **GitHub** (control de versiones)
 
 ##  Instrucciones para Ejecutar el Proyecto
 
