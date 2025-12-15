@@ -1,0 +1,342 @@
+/* Cv.css - Diseño Mejorado */
+
+/* Centrado del CV en la página */
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh; /* altura completa de la ventana */
+  display: flex;
+  justify-content: center; /* centra horizontalmente */
+  align-items: center;     /* centra verticalmente */
+  background-color: #e2e8f0; /* fondo suave que resalta el CV */
+  font-family: 'Inter', 'Segoe UI', Tahoma, sans-serif;
+}
+
+/* Variables CSS para consistencia */
+:root {
+  --primary-color: #1a365d;
+  --secondary-color: #2d3748;
+  --accent-color: #4299e1;
+  --text-light: #ffffff;
+  --text-dark: #2d3748;
+  --bg-light: #f7fafc;
+  --bg-card: #ffffff;
+  --border-color: #e2e8f0;
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.12);
+  --shadow-lg: 0 10px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Contenedor principal */
+.cv-container {
+  display: flex;
+  max-width: 1000px;
+  margin: 50px auto;
+  background-color: var(--bg-card);
+  border-radius: 16px;
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+  font-family: 'Inter', 'Segoe UI', Tahoma, sans-serif;
+  color: var(--text-dark);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cv-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.18);
+}
+
+/* Lado izquierdo */
+.cv-left {
+  width: 38%;
+  background: linear-gradient(180deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  color: var(--text-light);
+  padding: 40px 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.cv-left::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 200px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 0 0 50% 50%;
+}
+
+/* Foto */
+.cv-photo {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--text-light);
+  margin-bottom: 25px;
+  box-shadow: var(--shadow-md);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.cv-photo:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Secciones del lado izquierdo */
+.cv-left h2 {
+  margin-top: 30px;
+  margin-bottom: 15px;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  width: 100%;
+  padding-bottom: 8px;
+  position: relative;
+  text-align: center;
+}
+
+.cv-left h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: var(--accent-color);
+  border-radius: 2px;
+}
+
+.cv-left p {
+  font-size: 14px;
+  margin: 8px 0;
+  line-height: 1.6;
+  text-align: center;
+  opacity: 0.95;
+}
+
+.cv-left ul {
+  width: 100%;
+  padding: 0;
+  list-style: none;
+}
+
+.cv-left ul li {
+  padding: 8px 0;
+  font-size: 14px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.cv-left ul li::before {
+  content: '▪';
+  color: var(--accent-color);
+  font-size: 18px;
+}
+
+/* Lado derecho */
+.cv-right {
+  width: 62%;
+  padding: 50px 40px;
+  background-color: var(--bg-card);
+}
+
+/* Nombre y título */
+.cv-right h1 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--primary-color);
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+}
+
+.cv-right h1::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--accent-color), transparent);
+  margin-top: 10px;
+  border-radius: 2px;
+}
+
+/* Subtítulo profesional */
+.cv-subtitle {
+  font-size: 16px;
+  color: #718096;
+  margin-bottom: 25px;
+  font-weight: 500;
+}
+
+/* Títulos de sección */
+.cv-right h2 {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-top: 35px;
+  margin-bottom: 15px;
+  padding-bottom: 8px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cv-right h2::before {
+  content: '';
+  width: 5px;
+  height: 24px;
+  background: var(--accent-color);
+  border-radius: 3px;
+}
+
+/* Párrafos */
+.cv-right p {
+  font-size: 15px;
+  line-height: 1.7;
+  margin-bottom: 12px;
+  color: #4a5568;
+}
+
+/* Listas */
+.cv-right ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.cv-right ul li {
+  margin-bottom: 12px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #4a5568;
+  padding-left: 25px;
+  position: relative;
+}
+
+.cv-right ul li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--accent-color);
+  font-weight: bold;
+}
+
+/* Tarjetas de experiencia */
+.cv-experience-item {
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: var(--bg-light);
+  border-radius: 10px;
+  border-left: 4px solid var(--accent-color);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cv-experience-item:hover {
+  transform: translateX(5px);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Skills con barras de progreso */
+.cv-skill {
+  margin-bottom: 15px;
+}
+
+.cv-skill-name {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 5px;
+  color: var(--text-light);
+}
+
+.cv-skill-bar {
+  height: 6px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.cv-skill-progress {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent-color), #63b3ed);
+  border-radius: 3px;
+  transition: width 0.8s ease;
+}
+
+/* Iconos de contacto */
+.cv-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+  word-break: break-all;
+}
+
+.cv-contact-icon {
+  width: 20px;
+  height: 20px;
+  color: var(--accent-color);
+}
+
+/* Responsivo mejorado */
+@media (max-width: 768px) {
+  .cv-container {
+    flex-direction: column;
+    margin: 20px;
+    border-radius: 12px;
+  }
+  
+  .cv-left, .cv-right {
+    width: 100%;
+  }
+  
+  .cv-left {
+    padding: 30px 20px;
+  }
+  
+  .cv-right {
+    padding: 35px 25px;
+  }
+  
+  .cv-right h1 {
+    font-size: 26px;
+  }
+  
+  .cv-right h2 {
+    font-size: 20px;
+    margin-top: 25px;
+  }
+  
+  .cv-photo {
+    width: 130px;
+    height: 130px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cv-container {
+    margin: 10px;
+  }
+  
+  .cv-left {
+    padding: 25px 15px;
+  }
+  
+  .cv-right {
+    padding: 25px 20px;
+  }
+  
+  .cv-right h1 {
+    font-size: 24px;
+  }
+}
